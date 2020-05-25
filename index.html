@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <main class="main">
+        <header class="header"><h1>Form</h1></header>
+        <form action="https://dev.cotenfrontend.pl" method="post" class="form">
+<p><label for="name">First name:</label><input class="form__item" id="name" name="name" type="text"></p>
+<p><label>Last name:<input class="form__item" id="lastName" name="lastName" type="text"></label></p>
+<p><label>Age:</label><input class="form__item" type="number" name="yourAge" id="yourAge"></p>
+<p><label>Your email:</label><input class="form__item" type="email" name="email" id="email"></p>
+<p>
+<fieldset class="fieldset">
+    <legend>Colors</legend>
+    <div class="fieldset__box">
+   <p><label>Head color:<input class="form__feature" type="color" name="headColor" id="headColor"></label></p>
+   <p><label>Hand color:<input class="form__feature" type="color" name="handColor" id="handColor"></label></p>
+   <p><label>Eye color:<input class="form__feature" type="color" name="eyeColor" id="eyeColor"></label></p>
+   <p><label>Height:<input class="form__feature--special" type="range" min="0" max="10" step="2" name="height" id="height"></label></p>
+   </div>
+</fieldset>
+
+<p class="form__radio"><label>Choose your weapon:</p>
+<p class="form__radio-item"> <label for="yourWeapon"> Dynamite</label><input  value="dynamite" type="radio" name="yourWeapon" id="yourWeapon"> <label for="yourWeapon"> Gun</label><input type="radio" name="yourWeapon" id="yourWeapon" value="gun"></label></p>
+<p class="check"><label>I agree <input type="checkbox" required name="agrement" id="agrement" value="agree"></label></p>
+  <p class="submit"><input type="submit" name="submit" id="submit" value="submit"></p>
+</form>
+    </main>
+</body>
+</html>

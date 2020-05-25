@@ -1,0 +1,70 @@
+body{
+    background-color:#444;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+min-height:80vh;
+font-family:Arial, Helvetica, sans-serif;
+}
+.form{
+display:grid;
+grid-template-areas:"header header"
+"input input"
+"fieldset fieldset"
+"form__radio form__radio-item"
+"check submit";
+grid-template-columns:1fr 1fr;
+column-gap:20px;
+row-gap:10px;
+}
+
+.form__item{
+    display:block;
+    width:200px;
+}
+.fieldset{
+    grid-area:fieldset;
+    margin-top:14px;
+}
+.form__feature
+{
+    width:80px;
+    display:block;
+    margin-bottom:20px;
+}
+.fieldset__box{
+    display:flex;
+    align-content:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width:440px;
+
+    
+}
+p{
+    margin:10px;
+}
+.form__feature--special
+{
+    width:300px;
+}
+.form__radio{
+   grid-column-start: 1;
+    grid-area: form__radio;
+ 
+}
+.form__radio-item
+{
+    grid-area:form__radio-item;
+    grid-column-end: 2;
+    
+}
+.check{
+    grid-area:check;
+    grid-column-start:span 1 / 2;
+}
+.submit{
+    grid-area:submit;
+    grid-column-start:2;
+}
