@@ -1,3 +1,9 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
 body{
     background-color:#444;
     color:white;
@@ -21,7 +27,7 @@ row-gap:10px;
 
 .form__item{
     display:block;
-    width:200px;
+    max-width:200px;
 }
 .fieldset{
     grid-area:fieldset;
@@ -29,7 +35,7 @@ row-gap:10px;
 }
 .form__feature
 {
-    width:80px;
+    min-width:80px;
     display:block;
     margin-bottom:20px;
 }
@@ -38,16 +44,16 @@ row-gap:10px;
     align-content:center;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width:440px;
+    max-width:300px;
 
     
 }
 p{
-    margin:10px;
+    margin:5px;
 }
 .form__feature--special
 {
-    width:300px;
+    width:200px;
 }
 .form__radio{
    grid-column-start: 1;
@@ -67,4 +73,49 @@ p{
 .submit{
     grid-area:submit;
     grid-column-start:2;
+}
+@media screen and (max-width:400px){
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after{
+        box-sizing: inherit;
+    }
+body{
+    background: #000;
+    color:white;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+}
+.form{
+    display:grid;
+    grid-template-areas:"header header"
+    "input input"
+    "fieldset fieldset"
+    "form__radio form__radio-item"
+    "check submit";
+    grid-template-columns:1fr 1fr;
+    column-gap:10px;
+    row-gap:10px;
+    }
+.fieldset__box{
+   display:block;
+}
+.fieldset{
+    grid-area:fieldset;
+    min-width:300px;
+}
+.header{
+    grid-area:header;
+    margin-left:8px;
+}
+.form__item{
+    display:block;
+    max-width:250px;
+}
+.form__feature--special
+{
+    width:250px;
+}
 }
